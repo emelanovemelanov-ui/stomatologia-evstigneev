@@ -1,4 +1,4 @@
-# Builds the static site and force-pushes ./out to the gh-pages branch.
+﻿# Builds the static site and force-pushes ./out to the gh-pages branch.
 # Usage from the project folder: .\scripts\publish.ps1
 # With a custom domain on GitHub Pages: .\scripts\publish.ps1 -BasePath ""
 param([string]$BasePath = "/stomatologia-evstigneev")
