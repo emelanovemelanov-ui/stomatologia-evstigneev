@@ -18,15 +18,13 @@ npm run test:e2e   # проверка страниц (после build)
 
 ## Публикация
 
-Сайт бесплатно размещён на GitHub Pages из ветки `gh-pages`:
-https://emelanovemelanov-ui.github.io/stomatologia-evstigneev/
+Сайт бесплатно размещён на GitHub Pages из ветки `gh-pages`: https://devstigneev.ru
+
+Домен зарегистрирован в Selectel, DNS там же: A-записи `@` → `185.199.108.153`, `185.199.109.153`,
+`185.199.110.153`, `185.199.111.153`; CNAME `www` → `emelanovemelanov-ui.github.io`.
 
 Обновить сайт после правок:
 
 ```powershell
 .\scripts\publish.ps1
 ```
-
-Свой домен: купите домен, в настройках репозитория **Settings → Pages → Custom domain** впишите его,
-у регистратора добавьте DNS-записи по инструкции GitHub и публикуйте так:
-`.\scripts\publish.ps1 -BasePath ""`.
