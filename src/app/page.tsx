@@ -69,8 +69,8 @@ export default function HomePage() {
               Здоровая улыбка <span className="text-emerald-700 italic">для&nbsp;всей семьи</span>
             </h1>
             <p className="lead mt-6 max-w-xl">
-              Семейная клиника в с.&nbsp;Раменье. Лечим бережно и без спешки — по протоколам, на
-              современном оборудовании, с заботой о вашем комфорте.
+              Семейная клиника в с.&nbsp;Раменье. Качественное лечение без страха и боли — бережно,
+              без спешки, по протоколам и на современном оборудовании.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={`tel:${clinic.phoneTel}`} className="btn-primary tabular-nums">
