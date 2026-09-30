@@ -163,7 +163,7 @@ export default function HomePage() {
             </div>
             <figure className="mt-8 border-l-2 border-blush-300 pl-5">
               <blockquote className="font-display text-2xl leading-snug text-emerald-950 italic">
-                «Качественное лечение с комфортом для всей семьи»
+                «Качественное лечение без страха и боли»
               </blockquote>
               <figcaption className="mt-2 text-sm text-emerald-900/60">
                 Дмитрий Юрьевич Евстигнеев, главный врач
