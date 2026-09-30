@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-manrope), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
+
+  /* Brand olive (clinic uniforms) replaces default emerald across the app */
+  --color-emerald-50: #f4f5ee;
+  --color-emerald-100: #e7eadc;
+  --color-emerald-200: #cfd5bd;
+  --color-emerald-300: #b0ba95;
+  --color-emerald-400: #8e9a6f;
+  --color-emerald-500: #717e52;
+  --color-emerald-600: #5a673f;
+  --color-emerald-700: #485333;
+  --color-emerald-800: #3b4529;
+  --color-emerald-900: #2d3521;
+  --color-emerald-950: #1c2215;
+
+  --color-blush-50: #fbf3f1;
+  --color-blush-100: #f5e3df;
+  --color-blush-300: #e3b3ab;
+  --color-blush-500: #c7837a;
+  --color-blush-700: #9b5a52;
+
+  --color-cream: #f7f4ec;
+  --color-ink: #1c2215;
+}
+
+:root {
+  --background: #f7f4ec;
+  --foreground: #1c2215;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum" 0;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--color-blush-100);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-emerald-600);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold whitespace-nowrap transition duration-200 disabled:cursor-not-allowed disabled:opacity-40;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] text-emerald-700 uppercase;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-6 bg-blush-500;
+  }
+
+  .h-display {
+    @apply font-display font-semibold tracking-tight text-emerald-950;
+    font-size: clamp(2.5rem, 5.2vw, 4.5rem);
+    line-height: 1.02;
+  }
+
+  .h-section {
+    @apply font-display font-semibold tracking-tight text-emerald-950;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    line-height: 1.08;
+  }
+
+  .lead {
+    @apply text-lg leading-relaxed text-emerald-900/80;
+  }
+
+  .btn-primary {
+    @apply btn bg-emerald-800 text-white shadow-[0_10px_24px_-12px_rgba(45,53,33,0.7)] hover:bg-emerald-700;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-emerald-950 ring-1 ring-emerald-900/15 hover:ring-emerald-900/35;
+  }
+
+  .btn-light {
+    @apply btn bg-white text-emerald-950 hover:bg-cream;
+  }
+
+  .card {
+    @apply rounded-3xl bg-white ring-1 ring-emerald-950/[0.06] shadow-[0_1px_2px_rgba(28,34,21,0.04),0_12px_32px_-18px_rgba(28,34,21,0.18)];
+  }
+
+  .input {
+    @apply w-full rounded-2xl border border-emerald-900/15 bg-white px-4 py-3 text-base text-emerald-950 placeholder:text-emerald-900/40 transition outline-none focus:border-emerald-600 focus:ring-4 focus:ring-emerald-600/10;
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-800 transition hover:gap-2.5 hover:text-emerald-600;
+  }
+}
