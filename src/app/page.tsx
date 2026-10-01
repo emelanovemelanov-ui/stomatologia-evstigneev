@@ -66,7 +66,7 @@ export default function HomePage() {
           <div className="lg:col-span-7">
             <div className="eyebrow">Стоматология доктора Евстигнеева</div>
             <h1 className="h-display mt-5">
-              Здоровая улыбка <span className="text-emerald-700 italic">для&nbsp;всей семьи</span>
+              Здоровая улыбка <span className="text-emerald-700 italic">без&nbsp;страха и&nbsp;боли</span>
             </h1>
             <p className="lead mt-6 max-w-xl">
               Семейная клиника в с.&nbsp;Раменье. Качественное лечение без страха и боли — бережно,
